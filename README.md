@@ -37,14 +37,17 @@ For run jest tests:
 yarn test
 ```
 
-<!-- #### 📱 Preview Responsive
+#### 📱 Preview Responsive
 
 <p align="center">
-<video src='/' width=180/>
+<video src='https://user-images.githubusercontent.com/38052474/153956851-7acf472a-a994-48b3-b5e9-a0588a600fb3.mp4' width=180/>
 </p>
+
+
 
 #### 💻 Preview PC
 
 <p align="center">
-<video src='/' width=180/>
-</p> -->
+<video src='https://user-images.githubusercontent.com/38052474/153956875-678bd681-5661-40ad-891c-63b834b5dae7.mp4
+' width=180/>
+</p>
