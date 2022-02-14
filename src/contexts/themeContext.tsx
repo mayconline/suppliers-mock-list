@@ -1,11 +1,5 @@
 import React, { createContext, useCallback, useState } from 'react';
-
-export type ThemeType = 'LIGHT' | 'DARK';
-
-export type ThemeContextType = {
-  theme: ThemeType;
-  handleToggleTheme: () => void;
-};
+import { ThemeContextType, ThemeType } from '../types';
 
 export const ThemeContext = createContext<ThemeContextType>(
   {} as ThemeContextType,

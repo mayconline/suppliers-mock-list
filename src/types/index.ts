@@ -11,6 +11,13 @@ export type GetTokenType = {
   expires_in: number;
 };
 
+export type ThemeType = 'LIGHT' | 'DARK';
+
+export type ThemeContextType = {
+  theme: ThemeType;
+  handleToggleTheme: () => void;
+};
+
 export type LoginFormValueType = {
   username: string;
   password: string;
