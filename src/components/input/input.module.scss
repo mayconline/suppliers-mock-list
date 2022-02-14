@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+
+  label {
+    color: var(--primary);
+    font-size: 2rem;
+  }
+
+  &:focus-within label {
+    color: var(--focus);
+  }
+
+  input {
+    color: var(--primary);
+    border: none;
+    border-bottom: 2px solid var(--primary);
+    font-size: 1.2rem;
+    background-color: transparent;
+    width: 100%;
+    margin-left: 1rem;
+    padding: 0.8rem 0;
+
+    &::placeholder {
+      color: var(--primary);
+    }
+
+    &:focus,
+    &:focus::placeholder {
+      outline: none;
+      color: var(--focus);
+      border-bottom-color: var(--focus);
+    }
+
+    &:-webkit-autofill {
+      border: none;
+      border-bottom: 2px inset;
+      box-shadow: 0 0 0 1000px var(--secondary) inset;
+      -webkit-text-fill-color: var(--primary);
+    }
+
+    &:-webkit-autofill:focus {
+      border: none;
+      border-bottom: 2px solid var(--focus);
+      -webkit-text-fill-color: var(--focus);
+    }
+  }
+}

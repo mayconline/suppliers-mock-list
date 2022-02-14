@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+
+  h1 {
+    color: var(--secondary);
+    margin-bottom: 4rem;
+  }
+
+  section {
+    overflow-x: auto;
+    box-shadow: 2px 5px 10px 0px var(--shadow);
+
+    table {
+      border: 1px solid var(--secondary);
+      border-spacing: 0;
+      width: 100%;
+      min-width: 1024px;
+      border-radius: 0.5rem;
+
+      .table-header {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        align-items: center;
+        background-color: var(--secondary);
+        color: var(--primary);
+        padding: 1rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+    }
+  }
+}

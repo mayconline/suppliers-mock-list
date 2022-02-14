@@ -1,0 +1,27 @@
+name: jest-test
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - uses: szenius/set-timezone@v1.0
+        with:
+          timezoneLinux: 'America/Sao_Paulo'
+
+      - name: Install Dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Run Tests
+        run: yarn test

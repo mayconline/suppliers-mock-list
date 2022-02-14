@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--secondary);
+  width: 100%;
+  padding: 1rem 2rem;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &:last-child {
+      gap: 1rem;
+
+      @media (max-width: 720px) {
+        margin-top: 1rem;
+        width: 100%;
+      }
+    }
+
+    button {
+      background-color: transparent;
+      border: 1px solid var(--primary);
+    }
+  }
+
+  .icon {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+}

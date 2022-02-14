@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary: #f7f7ff;
+  --secondary: #484d6d;
+  --action: #57a773;
+  --shadow: rgba(0, 0, 0, 0.18);
+  --focus: #f2d0a4;
+  --skeleton: linear-gradient(-90deg, #adadad 0%, #f8f8f8 50%, #b4b4b4 100%);
+}
+
+html[theme='dark'] {
+  --primary: #f7f7ff;
+  --secondary: #171717;
+  --action: #57a773;
+  --shadow: rgba(0, 0, 0, 0.18);
+  --focus: #f2d0a4;
+  --skeleton: linear-gradient(-90deg, #adadad 0%, #f8f8f8 50%, #b4b4b4 100%);
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-size: 1.2rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2,
+h3 {
+  font-size: 1.6rem;
+}

@@ -1,0 +1,17 @@
+.table-item {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 0.5rem;
+
+  &:nth-child(even) {
+    filter: brightness(0.9);
+  }
+
+  &:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}

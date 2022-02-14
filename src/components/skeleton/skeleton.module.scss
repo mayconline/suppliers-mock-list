@@ -1,0 +1,23 @@
+.skeleton {
+  display: flex;
+  border-radius: 0.5rem;
+  width: 10rem;
+  height: 1.6rem;
+  margin: 1rem;
+  background: var(--skeleton);
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.skeleton-input {
+  width: 100%;
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -135% 0%;
+  }
+}
