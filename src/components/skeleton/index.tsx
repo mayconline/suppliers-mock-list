@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import styles from './skeleton.module.scss';
 
 interface SkeletonProps {
@@ -12,4 +13,4 @@ const Skeleton = ({ isInput = false }: SkeletonProps) => {
   );
 };
 
-export default Skeleton;
+export default memo(Skeleton);

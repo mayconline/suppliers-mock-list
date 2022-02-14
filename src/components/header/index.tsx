@@ -3,6 +3,7 @@ import { FaClipboardList, FaMoon, FaSignOutAlt, FaSun } from 'react-icons/fa';
 import Button from '../button';
 import useTheme from '../../hooks/useTheme';
 import useAuth from '../../hooks/useAuth';
+import { memo } from 'react';
 
 const Header = () => {
   const { theme, handleToggleTheme } = useTheme();
@@ -30,4 +31,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

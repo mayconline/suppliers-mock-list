@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { IconType } from 'react-icons';
 import Loading from '../loading';
 import styles from './button.module.scss';
@@ -32,4 +33,4 @@ const Button = ({
   );
 };
 
-export default Button;
+export default memo(Button);

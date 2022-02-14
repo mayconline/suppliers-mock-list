@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { IconType } from 'react-icons';
 import Skeleton from '../skeleton';
 import styles from './input.module.scss';
@@ -20,4 +21,4 @@ const Input = ({ icon: Icon, name, loading = false, ...props }: InputProps) => {
   );
 };
 
-export default Input;
+export default memo(Input);

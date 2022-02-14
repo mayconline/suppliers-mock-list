@@ -4,6 +4,7 @@ import { SupplierType } from '../../types';
 import { formatCNPJ, formatPhone } from '../../utils/format';
 import Button from '../button';
 import Skeleton from '../skeleton';
+import { memo } from 'react';
 
 const Supplier = ({
   publicId,
@@ -39,4 +40,4 @@ const Supplier = ({
   );
 };
 
-export default Supplier;
+export default memo(Supplier);
