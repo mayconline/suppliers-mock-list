@@ -1,10 +1,4 @@
-import {
-  createContext,
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useState,
-} from 'react';
+import { createContext, useCallback, useState } from 'react';
 import api from '../services/api';
 import { AuthContextType, GetTokenType, LoginFormValueType } from '../types';
 
@@ -31,8 +25,8 @@ export const AuthProvider: React.FC = ({ children }) => {
           formData,
           {
             auth: {
-              username: 'cayena-test',
-              password: 'dd3ed90e-667f-4248-a671-9266261dba5b',
+              username: import.meta.env.VITE_BASIC_AUTH_USERNAME as string,
+              password: import.meta.env.VITE_BASIC_AUTH_PASSWORD as string,
             },
           },
         );
