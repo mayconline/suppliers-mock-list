@@ -12,11 +12,15 @@ const Input = ({ icon: Icon, name, loading = false, ...props }: InputProps) => {
   return (
     <div className={styles.container}>
       {Icon && (
-        <label htmlFor={name} title={name}>
+        <label id={name} htmlFor={name} title={name}>
           <Icon />
         </label>
       )}
-      {loading ? <Skeleton isInput /> : <input name={name} {...props} />}
+      {loading ? (
+        <Skeleton isInput />
+      ) : (
+        <input id={name} aria-labelledby={name} name={name} {...props} />
+      )}
     </div>
   );
 };
