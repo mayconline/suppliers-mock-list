@@ -1,5 +1,6 @@
 import { createContext, useCallback, useState } from 'react';
 import api from '../services/api';
+import { BASIC_AUTH } from '../utils/variables';
 import { AuthContextType, GetTokenType, LoginFormValueType } from '../types';
 
 export const AuthContext = createContext<AuthContextType>(
@@ -25,8 +26,8 @@ export const AuthProvider: React.FC = ({ children }) => {
           formData,
           {
             auth: {
-              username: import.meta.env.VITE_BASIC_AUTH_USERNAME as string,
-              password: import.meta.env.VITE_BASIC_AUTH_PASSWORD as string,
+              username: BASIC_AUTH.username,
+              password: BASIC_AUTH.password,
             },
           },
         );

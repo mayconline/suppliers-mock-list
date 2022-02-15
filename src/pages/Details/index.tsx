@@ -18,25 +18,6 @@ import api from '../../services/api';
 import useAuth from '../../hooks/useAuth';
 import { notify } from '../../utils/notification';
 
-// const MOCK_SUPPLIER_DETAIL: SupplierDetailType = {
-//   publicId: 'b8d548c6-a766-4364-b853-31019a4fc0ab',
-//   name: 'Distribuidora Minnie Kutch',
-//   cnpj: '50.418.736/0001-52',
-//   phoneNumber: '5511985412512',
-//   zipCode: '128457112',
-//   address: 'Avenida República do Líbano',
-//   number: '74',
-//   complement: 'Cj 74',
-//   neighborhood: 'Mirandópolis',
-//   city: 'São Paulo',
-//   state: 'SP',
-//   ownerName: 'Carl',
-//   ownerEmail: 'ca@email.com',
-//   ownerPhoneNumber: '5511912365474',
-//   createdAt: '2021-10-14T13:20:35',
-//   updatedAt: '2021-10-14T13:20:48',
-// };
-
 const Details = () => {
   const { token } = useAuth();
   const params = useParams();

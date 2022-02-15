@@ -19,7 +19,7 @@ const Supplier = ({
   loading?: boolean;
 }) => {
   return (
-    <tr className={styles['table-item']}>
+    <tr className={styles['table-item']} data-testid={`row-${publicId}`}>
       <td>{loading ? <Skeleton /> : name}</td>
       <td>{loading ? <Skeleton /> : formatCNPJ(cnpj)}</td>
       <td>{loading ? <Skeleton /> : formatPhone(phoneNumber)}</td>
