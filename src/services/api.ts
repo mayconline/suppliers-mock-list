@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import axios, { AxiosError, AxiosResponse } from 'axios';
 
 const api = axios.create({
   baseURL: 'https://psad9m6vrj.execute-api.sa-east-1.amazonaws.com/test',
@@ -6,21 +6,21 @@ const api = axios.create({
 
 export default api;
 
-api.interceptors.response.use(
-  (response: AxiosResponse) => {
-    console.log(response.status);
+const successAPIErrorHandler = (response: AxiosResponse) => {
+  if (response.status && ![200, 201].includes(response.status)) {
+    throw new Error();
+  }
 
-    if (response.status && [401, 403].includes(response.status)) {
-      const error = new Error();
-      throw error;
-    }
+  return response;
+};
 
-    return response;
-  },
-  error => {
+const errorAPIErrorHandler = (error: AxiosError) => {
+  if (error?.response?.status && [401, 403].includes(error?.response?.status)) {
     sessionStorage.removeItem('@fakeToken');
     window.location.assign('/login');
+  }
 
-    return Promise.reject(error);
-  },
-);
+  return Promise.reject(error);
+};
+
+api.interceptors.response.use(successAPIErrorHandler, errorAPIErrorHandler);

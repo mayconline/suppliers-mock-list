@@ -37,7 +37,6 @@ const Login = () => {
     } catch (err: any) {
       setStateForm('ERROR');
       notify('Failed to login, please verify your credentials.', 'ERROR');
-      throw new Error('Failed to login');
     }
   };
 

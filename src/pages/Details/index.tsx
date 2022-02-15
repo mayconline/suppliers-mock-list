@@ -67,7 +67,6 @@ const Details = () => {
       } catch (err: any) {
         setStateForm('ERROR');
         notify('Failed to fetch supplier.', 'ERROR');
-        throw new Error('Failed to fetch supplier');
       }
     };
 

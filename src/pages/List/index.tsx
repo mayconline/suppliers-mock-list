@@ -73,7 +73,6 @@ const List = () => {
       } catch (err: any) {
         setStateFetch('ERROR');
         notify('Failed to fetch list.', 'ERROR');
-        throw new Error('Failed to fetch list');
       }
     };
 
